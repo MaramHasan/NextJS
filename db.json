@@ -74,20 +74,20 @@
         "id":8,
         "title": "Event 8",
         "description": "Description 8",
-        "category" : "art",
+        "category" : "sports",
         "date": "February 28"
     },{
         "id":9,
         "title": "Event 9",
         "description": "Description 9",
-        "category" : "sports",
-        "date": "March 20"
+        "category" : "food",
+        "date": "April 25"
     },{
         "id":10,
         "title": "Event 10",
         "description": "Description 10",
-        "category" : "food",
-        "date": "July 18"
+        "category" : "sports",
+        "date": "August 5"
     }
     ]
 }
