@@ -20,6 +20,11 @@ export default function CommentsPage() {
         )
     }
 
+    const deleteComment = async(commentId) => {
+        await fetch(`/api/comments/${commentId}`, {method: 'DELETE'})
+        loadComments()
+    }
+
     return (
         <React.Fragment>
             <input type="text" value={comment} placeholder="add comment" onChange={(e) => setComment(e.target.value)} />
@@ -29,6 +34,7 @@ export default function CommentsPage() {
                 return (
                     <div key={comment.id}>
                         <h2>{comment.id} {comment.text}</h2>
+                        <button onClick={() => deleteComment(comment.id)}> Delete Comment</button>
                     </div>
                 )
             })}

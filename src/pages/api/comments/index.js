@@ -10,5 +10,6 @@ export default function handler(req, res) {
             text: comment
         }
         comments.push(newComment)
+        res.status(201).json(comments)
     }
 }
