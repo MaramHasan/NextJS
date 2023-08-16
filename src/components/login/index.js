@@ -45,7 +45,9 @@ const Login = ({setIsLoggedIn}) => {
 
                 setIsLoggedIn(true)
                 dispatch(updateUserData(responseData))
-                router.push('/account', undefined, {shallow: true})
+                setTimeout(() => {
+                    router.push('/account', undefined, {shallow: true})
+                }, 200)
             }
 
         } catch (error) {

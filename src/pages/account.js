@@ -69,15 +69,15 @@ export async function getServerSideProps(context) {
                 loggedUserData: responseData,
             },
         }
-    }
-
-    return {
-        redirect: {
-            destination: '/login',
-            permanent: false,
-        },
-        props: {
-            loggedUserData: null,
-        },
+    } else {
+        return {
+            redirect: {
+                destination: '/login',
+                permanent: false,
+            },
+            props: {
+                loggedUserData: null,
+            },
+        }
     }
 }
