@@ -4,6 +4,9 @@ import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 import Head from 'next/head'
 import '@/styles/layout.css'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import {Provider} from 'react-redux'
+import store from '@/store'
 
 export default function App({Component, pageProps}) {
     if (Component.getLayout) {
@@ -16,7 +19,9 @@ export default function App({Component, pageProps}) {
                 <meta name="description" content="any content about the page not specific the description content" />
             </Head>
             <Header />
-            <Component {...pageProps} />
+            <Provider store={store}>
+                <Component {...pageProps} />
+            </Provider>
             <Footer />
         </React.Fragment>)
 }
