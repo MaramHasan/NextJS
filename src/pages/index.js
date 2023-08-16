@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import {useRouter} from 'next/router'
+import Head from 'next/head'
 
 export default function Home() {
     const router = useRouter()
@@ -11,6 +12,10 @@ export default function Home() {
 
     return (
         <div>
+            <Head>
+                <title>Home page</title>
+                <meta name="description" content="some text regarding the home page description" />
+            </Head>
             <h1>Home page</h1>
             <Link href="/blog">
                 <h1>Blog</h1>
